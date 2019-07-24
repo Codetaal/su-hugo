@@ -1,5 +1,6 @@
 ---
-title:  "Welcome to Hugo!"
+title: Welcome to Hugo! v2
+
 ---
 You’ll find this post in your `content/posts` directory.
 
