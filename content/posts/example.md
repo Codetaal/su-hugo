@@ -1,5 +1,6 @@
 ---
 title: Welcome to Hugo! v2
+date: "2019-07-24T12:42:00-00:00"
 
 ---
 You’ll find this post in your `content/posts` directory.
