@@ -1,6 +1,9 @@
 {{ partial "head" . }}
 
-{{/* Add your site or webapp content here */}}
 <p>{{ .Content }}</p>
+
+{{ if (isset .Params "mixcloud") }}
+<iframe width="100%" height="400" src="{{ .Params.mixcloud }}" frameborder="0"></iframe>
+{{ end }}
 
 {{ partial "footer" . }}

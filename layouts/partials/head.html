@@ -11,3 +11,23 @@
     <link rel="stylesheet" href="{{ "css/styles.min.css" | relURL }}"/>
   </head>
   <body>
+
+{{ with .Site.GetPage "/" }}{{ .Content }}{{ end }}
+
+<nav class="sidebar-nav">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    {{ end }}
+</nav>
+
+<ul>
+  {{ range .Data.Pages }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Date.Format "2006-01-02" }} | {{ .Title }}</a>
+      {{ range .Params.tags }}
+        {{ . }}
+      {{ end }}
+    </li>
+  {{ end }}
+</ul>

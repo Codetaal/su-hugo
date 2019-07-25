@@ -16,7 +16,7 @@ destination = "../dist/"
 
 # Categories and tags disabled for an easier start
 # https://gohugo.io/getting-started/configuration/#toml-configuration
-disableKinds = ["taxonomy", "taxonomyTerm"]
+# disableKinds = ["taxonomy", "taxonomyTerm"]
 
 # Enable this to have links relativized by Hugo
 # E.g,  if your /post/first/ page contains a link 
@@ -37,16 +37,26 @@ Write an awesome description for your new site here. You can edit this
 line in config.yml. It will appear in your document head meta (for
 Google search results) and in your RSS feed description.
 '''
-author = "Your name"
+author = "Bram van der Meij"
 
 # Site Menus
 # See the Hugo docs for usage in layouts
 # https://gohugo.io/content-management/menus/
 [[menu.main]]
-  name = "Home"
-  weight = 1
-  identifier = "home"
+  name = "All"
+  weight = 10
+  identifier = "all"
   url = "/"
+[[menu.main]]
+  name = "First"
+  weight = 20
+  identifier = "first"
+  url = "/tags/first/"
+[[menu.main]]
+  name = "Second"
+  weight = 30
+  identifier = "second"
+  url = "/tags/second/"
 
 # Related Content
 # ---------------
