@@ -1,7 +1,7 @@
 ---
 title: Welcome to Hugo! v2
 date: "2018-08-31T14:24:17-04:00"
-tags: [first, second]
+tags: second
 mixcloud: https://www.mixcloud.com/widget/iframe/?feed=%2Fsoundsunfamiliar%2Fsounds-unfamiliar-w-val-clipp-08-08-2018%2F
 
 ---

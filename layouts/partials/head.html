@@ -16,8 +16,14 @@
 
 <nav class="sidebar-nav">
     {{ $currentPage := . }}
+    {{ $taxoTerm := $currentPage.Data.Term }}
+    {{ $postTerm := .Params.tags }}
     {{ range .Site.Menus.main }}
-    <a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    <a href="{{ .URL }}" title="{{ .Title }}">
+      {{ if and (eq $currentPage.Kind "taxonomy") (eq .Identifier $taxoTerm) }} &dot; {{ end }} 
+      {{ if and (eq $currentPage.Kind "page") (eq .Identifier $postTerm) }} &larr; {{ end }} 
+      {{ .Name }}
+    </a>
     {{ end }}
 </nav>
 
@@ -25,9 +31,7 @@
   {{ range .Data.Pages }}
     <li>
       <a href="{{ .Permalink }}">{{ .Date.Format "2006-01-02" }} | {{ .Title }}</a>
-      {{ range .Params.tags }}
-        {{ . }}
-      {{ end }}
+      {{ .Params.tags }}
     </li>
   {{ end }}
 </ul>
